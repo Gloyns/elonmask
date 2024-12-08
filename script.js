@@ -6,11 +6,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const downloadButton = document.getElementById('downloadExtension');
     const replacementTextInput = document.getElementById('replacementText');
 
-    // Image blur functionality
-    if (blurSlider && blurImage) {
-        blurSlider.addEventListener('input', (e) => {
-            const blurAmount = (100 - e.target.value) / 10;
-            blurImage.style.filter = `blur(${blurAmount}px)`;
+    // Ensure the image is loaded before applying blur
+    if (blurImage) {
+        blurImage.addEventListener('load', () => {
+            // Image blur functionality
+            if (blurSlider) {
+                blurSlider.addEventListener('input', (e) => {
+                    const blurAmount = (100 - e.target.value) / 10;
+                    blurImage.style.filter = `blur(${blurAmount}px)`;
+                });
+            }
         });
     }
 
