@@ -1,16 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const blurSlider = document.getElementById('blurSlider');
-    const blurImage = document.getElementById('blurImage');
+    const blurSlider = document.getElementById('heroBlurSlider');
+    const blurImage = document.getElementById('heroImage');
     const removeContentCheckbox = document.getElementById('removeContentCheckbox');
     const introSection = document.getElementById('introSection');
     const downloadButton = document.getElementById('downloadExtension');
     const replacementTextInput = document.getElementById('replacementText');
 
     // Image blur functionality
-    blurSlider.addEventListener('input', (e) => {
-        const blurAmount = (100 - e.target.value) / 10;
-        blurImage.style.filter = `blur(${blurAmount}px)`;
-    });
+    if (blurSlider && blurImage) {
+        blurSlider.addEventListener('input', (e) => {
+            const blurAmount = (100 - e.target.value) / 10;
+            blurImage.style.filter = `blur(${blurAmount}px)`;
+        });
+    }
 
     // Content removal checkbox
     removeContentCheckbox.addEventListener('change', (e) => {

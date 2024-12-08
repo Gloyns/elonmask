@@ -145,6 +145,53 @@ body {
     margin-right: 0.5rem;
 }
 
+.hero__image.image-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.hero__image.image-container img {
+    width: 100%;
+    height: auto;
+    transition: filter 0.3s ease;
+}
+
+.hero__image .slider-container {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    padding: 0 15px;
+    z-index: 10;
+}
+
+.hero__image .slider {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    background: rgba(255, 255, 255, 0.5);
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    border-radius: 5px;
+}
+
+.hero__image .slider:hover {
+    opacity: 1;
+}
+
+.hero__image .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #3498db;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
 @media (max-width: 768px) {
     .row {
         flex-direction: column;
