@@ -37,7 +37,7 @@ hero:
   enable: true
   hero__title:  The Chrome Extension for an Elon-Free Internet
   hero__description: Feeling overwhelmed by endless Elon Musk content?<br><br>Take back control of your browsing experience with Elon Mask, the Chrome extension that lets you block, blur or replace mentions of Elon Musk, his companies, and related content.
-  hero__image: "/images/extension.png"
+  hero__image: "images/extension.png"
 
 
 #-------------------------------
@@ -90,20 +90,20 @@ features:
 features__items:
   - title: "Block All Mentions"
     description: "Completely block all mentions of Elon Musk and his companies from your browsing experience."
-    image: "/images/block-before-after.png"
+    image: "images/block-before-after.png"
   
 
   - title: "Image Blurring"
     description: "Soften your browsing experience by blurring images instead of removing them completely."
-    image: "/images/blur.png"
+    image: "images/blur.png"
 
   - title: "Name Swapping"
     description: "Replace mentions with custom text of your choice for a more entertaining experience."
-    image: "/images/name-swap.png"
+    image: "images/name-swap.png"
 
   - title: "Want more?"
     description: "We're open to ideas! Let us know what you want and we'll see if we can make it happen."
-    image: "/images/new-ideas.png"
+    image: "images/new-ideas.png"
 
 
 #-------------------------------
@@ -182,7 +182,7 @@ blog__settings:
 
 #-------------------------------
 # Footer Settings
-footer__background__image: "/images/new-ideas.png"
+footer__background__image: "images/new-ideas.png"
 
 #-------------------------------
 # Contact Settings
