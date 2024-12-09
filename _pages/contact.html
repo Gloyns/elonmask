@@ -35,12 +35,14 @@ image: '/images/musk-phone.webp'
 </div>
 
 <script>
-  // Ensure the script directory exists
-  const scriptPath = '/src/formeasy.js';
-  const script = document.createElement('script');
-  script.src = scriptPath;
-  script.onerror = function() {
-    console.error('Error loading form script');
-  };
-  document.body.appendChild(script);
+  document.addEventListener('DOMContentLoaded', function() {
+    const scriptPath = '{{ site.baseurl }}/src/formeasy.js';
+    const script = document.createElement('script');
+    script.src = scriptPath;
+    script.onerror = function() {
+      console.error('Error loading form script');
+      document.getElementById('form-status').innerHTML = '<p style="color: red;">Error loading form functionality. Please refresh the page.</p>';
+    };
+    document.body.appendChild(script);
+  });
 </script>
