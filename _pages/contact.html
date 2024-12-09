@@ -11,43 +11,21 @@ image: '/images/musk-phone.webp'
     <p class="contact-description">{{site.data.settings.contact.description}}</p>
     {% endif %}
   </div>
-  <form id="contact-form" action="https://script.google.com/macros/s/AKfycbyqHDmyCSKD1uBRhUh-M_gqTA3JnWYWToSs7ZMqG9Gj3Q3t1GLQFCAQSsMNBnv4jKMLLA/exec" method="POST">
+  <form class="form" action="{% if site.data.settings.contact.email %}https://formspree.io/f/{{site.data.settings.contact.email}}{% else %}#{% endif %}" method="POST">
     <div class="form__group">
-      <label class="form__label" for="name">Name</label>
-      <input class="form__input" type="text" id="name" name="name" required />
+      <label class="form__label screen-reader-text" for="form-name">Your Name</label>
+      <input class="form__input" id="form-name" type="text" name="name" placeholder="Name" required>
     </div>
-
     <div class="form__group">
-      <label class="form__label" for="email">Email</label>
-      <input class="form__input" type="email" id="email" name="email" required />
+      <label class="form__label screen-reader-text" for="form-email">Your Email</label>
+      <input class="form__input" id="form-email" type="email" name="_replyto" placeholder="Email" required>
     </div>
-
     <div class="form__group">
-      <label class="form__label" for="message">Message</label>
-      <textarea class="form__input" id="message" name="message" rows="4" required></textarea>
+      <label class="form__label screen-reader-text" for="form-text">Your Message</label>
+      <textarea class="form__input" id="form-text" name="text" rows="7" placeholder="Message" required></textarea>
     </div>
-
     <div class="form__group">
       <button class="button button--primary" type="submit">Send Message</button>
     </div>
-    <div id="form-status" style="margin-top: 20px;"></div>
   </form>
 </div>
-
-<script>
-  // Wait for DOM to be ready
-  document.addEventListener('DOMContentLoaded', function() {
-    // Load the form script
-    const script = document.createElement('script');
-    script.src = '{{ site.baseurl }}/src/formeasy.js';
-    script.onload = function() {
-      console.log('Form script loaded successfully');
-    };
-    script.onerror = function(error) {
-      console.error('Error loading form script:', error);
-      document.getElementById('form-status').innerHTML = 
-        '<p style="color: red;">Error loading form functionality. Please refresh the page.</p>';
-    };
-    document.body.appendChild(script);
-  });
-</script>
