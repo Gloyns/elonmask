@@ -23,7 +23,7 @@
   
   
     
-      Name:
+      Name
       
     ">
   <meta name="twitter:image:src" content="http://localhost:4000/images/musk-phone.webp">
@@ -38,7 +38,7 @@
   
   
     
-      Name:
+      Name
       
     ">
   <meta property="og:image" content="http://localhost:4000/images/musk-phone.webp">
@@ -166,17 +166,17 @@
   </div>
   <form id="contact-form" action="https://script.google.com/macros/s/AKfycbyqHDmyCSKD1uBRhUh-M_gqTA3JnWYWToSs7ZMqG9Gj3Q3t1GLQFCAQSsMNBnv4jKMLLA/exec" method="POST">
     <div class="form__group">
-      <label class="form__label" for="name">Name:</label>
+      <label class="form__label" for="name">Name</label>
       <input class="form__input" type="text" id="name" name="name" required />
     </div>
 
     <div class="form__group">
-      <label class="form__label" for="email">Email:</label>
+      <label class="form__label" for="email">Email</label>
       <input class="form__input" type="email" id="email" name="email" required />
     </div>
 
     <div class="form__group">
-      <label class="form__label" for="message">Message:</label>
+      <label class="form__label" for="message">Message</label>
       <textarea class="form__input" id="message" name="message" rows="4" required></textarea>
     </div>
 
@@ -188,13 +188,18 @@
 </div>
 
 <script>
+  // Wait for DOM to be ready
   document.addEventListener('DOMContentLoaded', function() {
-    const scriptPath = '/src/formeasy.js';
+    // Load the form script
     const script = document.createElement('script');
-    script.src = scriptPath;
-    script.onerror = function() {
-      console.error('Error loading form script');
-      document.getElementById('form-status').innerHTML = '<p style="color: red;">Error loading form functionality. Please refresh the page.</p>';
+    script.src = '/src/formeasy.js';
+    script.onload = function() {
+      console.log('Form script loaded successfully');
+    };
+    script.onerror = function(error) {
+      console.error('Error loading form script:', error);
+      document.getElementById('form-status').innerHTML = 
+        '<p style="color: red;">Error loading form functionality. Please refresh the page.</p>';
     };
     document.body.appendChild(script);
   });
