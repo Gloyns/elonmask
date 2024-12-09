@@ -187,7 +187,7 @@ footer__background__image: "images/new-ideas.png"
 #-------------------------------
 # Contact Settings
 contact:
-  email: https://formspree.io/f/mvgonred # Add your form_id
+  email: mvgonred # Add your form_id
   description: We’d love to hear your thoughts! If you’re using this extension and have feedback, suggestions, or ideas for improvements, please let us know. # Add a description of your form
 
 # NOTE
