@@ -2,7 +2,7 @@
 layout: page
 title: Contact
 permalink: /contact/
-image: '/images/16.jpg'
+image: '/images/musk-phone.webp'
 ---
 
 <div class="form-box">
@@ -11,21 +11,36 @@ image: '/images/16.jpg'
     <p class="contact-description">{{site.data.settings.contact.description}}</p>
     {% endif %}
   </div>
-  <form class="form" action="{% if site.data.settings.contact.email %}https://formspree.io/f/{{site.data.settings.contact.email}}{% else %}#{% endif %}" method="POST">
+  <form id="contact-form" action="https://script.google.com/macros/s/AKfycbyqHDmyCSKD1uBRhUh-M_gqTA3JnWYWToSs7ZMqG9Gj3Q3t1GLQFCAQSsMNBnv4jKMLLA/exec" method="POST">
     <div class="form__group">
-      <label class="form__label screen-reader-text" for="form-name">Your Name</label>
-      <input class="form__input" id="form-name" type="text" name="name" placeholder="Name" required>
+      <label class="form__label" for="name">Name:</label>
+      <input class="form__input" type="text" id="name" name="name" required />
     </div>
+
     <div class="form__group">
-      <label class="form__label screen-reader-text" for="form-email">Your Email</label>
-      <input class="form__input" id="form-email" type="email" name="_replyto" placeholder="Email" required>
+      <label class="form__label" for="email">Email:</label>
+      <input class="form__input" type="email" id="email" name="email" required />
     </div>
+
     <div class="form__group">
-      <label class="form__label screen-reader-text" for="form-text">Your Message</label>
-      <textarea class="form__input" id="form-text" name="text" rows="7" placeholder="Message" required></textarea>
+      <label class="form__label" for="message">Message:</label>
+      <textarea class="form__input" id="message" name="message" rows="4" required></textarea>
     </div>
+
     <div class="form__group">
       <button class="button button--primary" type="submit">Send Message</button>
     </div>
+    <div id="form-status" style="margin-top: 20px;"></div>
   </form>
 </div>
+
+<script>
+  // Ensure the script directory exists
+  const scriptPath = '/src/formeasy.js';
+  const script = document.createElement('script');
+  script.src = scriptPath;
+  script.onerror = function() {
+    console.error('Error loading form script');
+  };
+  document.body.appendChild(script);
+</script>

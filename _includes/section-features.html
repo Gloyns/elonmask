@@ -1,0 +1,38 @@
+{% if site.data.settings.features.enable == true %}
+<!-- begin features -->
+<div class="container">
+  <section class="section features animate">
+    <div class="row">
+
+      <div class="col col-4 col-d-12">
+        <div class="section__info">
+          <h2 class="section__title">{{ site.data.settings.features.features__title }}</h2>
+          {% if site.data.settings.features.features__description %}
+          <p class="section__description">{{ site.data.settings.features.features__description }}</p>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="col col-8 col-d-12">
+        <div class="row">
+          {% for feature in site.data.settings.features__items %}
+          <article class="feature col col-6 col-d-12">
+            <div class="feature__content">
+                <img class="lazy" data-src="{{ feature.image }}" alt="{{ feature.title }}">
+              <div class="feature__info">
+                <h3 class="feature__title">{{ feature.title }}</h3>
+                {% if feature.description %}
+                <p class="feature__description">{{ feature.description }}</p>
+                {% endif %}
+              </div>
+            </div>
+          </article>
+          {% endfor %}
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+<!-- end features -->
+{% endif %}
