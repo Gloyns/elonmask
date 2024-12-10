@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-description: I have nothing personal against Elon Musk. This extension is made in the spirit of being able to control your own web experience and light-hearted humour.
+description: I have nothing against Elon Musk. This extension is made in the spirit of being able to control your own web experience.
 permalink: /about/
 image: 
 image_caption: 
@@ -11,4 +11,4 @@ I created this extension in response to a growing number of comments from people
 
 This extension is designed to help alleviate that and give you back control over your browsing experience. Whether you want to completely block Elon-related content or just tone it down, this tool lets you enjoy your favourite websites without feeling overwhelmed.
 
-It’s completely free, and I’mnot a professional developer, so it’s not perfect. But if you have any ideas or suggestions for improvement, please get in touch!
+I'm not a professional developer, so it’s not perfect. But if you have any ideas or suggestions for improvement, please get in touch!
