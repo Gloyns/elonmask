@@ -12,6 +12,8 @@ menu__settings:
   menu__items:
     - title: 'Home'
       url: '/'
+    - title: 'Install'
+      url: '/install/'  
     - title: 'About'
       url: '/about/'
     - title: 'Contact'
@@ -36,7 +38,7 @@ social:
 hero:
   enable: true
   hero__title:  The Chrome Extension for an Elon-Free Internet
-  hero__description: Feeling overwhelmed by endless Elon Musk content?<br><br>Take back control of your browsing experience with Elon Mask, the Chrome extension that lets you block, blur or replace mentions of Elon Musk, his companies, and related content.
+  hero__description: Feeling overwhelmed by endless Elon Musk content?<br><br>Take back control of your browsing experience with Elon Mask, the Chrome extension that lets you block, blur or replace mentions of Elon Musk related content.
   hero__image: "images/extension.png"
 
 
