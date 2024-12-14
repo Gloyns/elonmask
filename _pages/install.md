@@ -15,7 +15,7 @@ image_caption:
  On Windows: Right-click the .zip file and select Extract All, then choose a location to save the folder.
  On Mac: Double-click the .zip file, and it will extract automatically.
 
-3. Ensure the unzipped folder is named Elon-Mask.
+3. Ensure the unzipped folder is named elon-mask.
 
 
 <h2>Step 2: Open Chrome Extensions Page</h2>
@@ -39,7 +39,7 @@ and press Enter.
 
 1. Click the Load unpacked button that appears after enabling Developer mode.
 2. A file picker window will open. Navigate to the folder where you unzipped the extension (i.e., the Elon-Mask folder).
-3. Select the Elon-Mask folder and click Select Folder (or Open).
+3. Select the elon-mask folder and click Select Folder (or Open).
 
 <h2>Step 5: Confirm Installation</h2>
 
