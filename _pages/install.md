@@ -41,7 +41,7 @@ and press Enter.
 2. A file picker window will open. Navigate to the folder where you unzipped the extension (i.e., the Elon-Mask folder).
 3. Select the Elon-Mask folder and click Select Folder (or Open).
 
-<h2>Step 5: Confirm Installation
+<h2>Step 5: Confirm Installation</h2>
 
 1. Once loaded, the Elon Mask extension will appear on the Extensions page.
 2. Ensure the toggle next to the extension is set to ON.
